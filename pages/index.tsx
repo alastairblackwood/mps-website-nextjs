@@ -1,15 +1,21 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import { ReactElement } from 'react';
+import { Heading } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
+import Hero from '../components/sections/Hero';
+import Layout from '../components/layouts/Layout';
+import Iconoclast from '../public/images/site/Iconoclast.jpg';
+import Shapes from '../public/images/site/Shapes.jpg';
+import Piano from '../public/images/site/pianoiv.jpg';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+export default function Home() {
+  return (
+    <Layout>
+      <Hero />
+    </Layout>
+  );
+}
 
-export default IndexPage
+// ** FOR REFERENCE PURPOSES ONLY **
+// Home.getLayout = function getLayout(page: ReactElement) {
+//   return <Layout>{page}</Layout>;
+// };
